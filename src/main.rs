@@ -19,10 +19,15 @@ fn main() {
     println!("{}",!b);
     println!("{}",a%b);
 
-    for i in 1..=100{
+    /*for i in 1..=100{
         println!("i : {}",i);
-    }
+    }*/
 
+    let mut i = 0;
+    while i<101{
+        print!("{} ",i);
+        i+=2;
+    }
 
 
 }
