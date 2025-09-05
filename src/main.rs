@@ -18,4 +18,11 @@ fn main() {
     println!("{}",a^b);
     println!("{}",!b);
     println!("{}",a%b);
+
+    for i in 1..=100{
+        println!("i : {}",i);
+    }
+
+
+
 }
