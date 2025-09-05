@@ -1,27 +1,11 @@
 fn main() {
-    
-    let mut v1: i32 = 100;
 
-    let f1: f32 = 3.141;
-
-    let initial: char = 'T';
-
-    v1 = v1 + 100;
-
-    let mut v1:i32 = 300;
-
-{
-    v1 = 50;
-    println!("value v1 inside the scope {}", v1);
-}
-
-    println!("value of v1 outside the scope: {}", v1);
-
-
-    println!("u16 max: {}",u16::MAX);
-
-
-    let flag:bool =  true;
-
-    println!("flag value {}", flag);
+    let a = 100;
+    let b = 50;
+    let c = 25;
+    println!("{}",a+b);
+    println!("{}",a-b);
+    println!("{}",a*b);
+    println!("{}",a/b);
+    println!("{}",a%b);
 }
