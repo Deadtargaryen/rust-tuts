@@ -7,10 +7,15 @@ fn main() {
     let mut d: i32 = 0;
 
     d += 100; // d = d + 100
+    d -= 50;  // d = d - 50
+    d *= 100;  // d = d * 100
+    d /= 20;  // d = d / 20
 
-    println!("{}",a+b);
-    println!("{}",a-b);
-    println!("{}",a*b);
-    println!("{}",a/b);
+
+//operations
+    println!("{}",a|b);
+    println!("{}",a&b);
+    println!("{}",a^b);
+    println!("{}",!b);
     println!("{}",a%b);
 }
