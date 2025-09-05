@@ -1,6 +1,6 @@
 fn main() {
 
-    let a = 100;
+    let a = 10;
     let b = 50;
     let c = 25;
 
@@ -13,20 +13,28 @@ fn main() {
 
 
 //operations
-    println!("{}",a|b);
-    println!("{}",a&b);
-    println!("{}",a^b);
-    println!("{}",!b);
+    println!("{}",a>b);
+    println!("{}",a<b);
+    println!("{}",a==b);
+    println!("{}",a>=b);
     println!("{}",a%b);
 
     /*for i in 1..=100{
         println!("i : {}",i);
-    }*/
+    }
 
     let mut i = 0;
     while i<101{
-        print!("{} ",i);
+        println!("{} ",i);
         i+=2;
+    }*/
+
+    if a>b{
+        println!("a is greater than b");
+    } else if a==b {
+        println!("a is equal to b");
+    } else{
+        println!("a is lesser than b")
     }
 
 
