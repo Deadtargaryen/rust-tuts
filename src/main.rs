@@ -18,5 +18,10 @@ fn main() {
     println!("value of v1 outside the scope: {}", v1);
 
 
-    println!("i16 max: {}",i16::MAX);
+    println!("u16 max: {}",u16::MAX);
+
+
+    let flag:bool =  true;
+
+    println!("flag value {}", flag);
 }
