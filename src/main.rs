@@ -11,12 +11,16 @@ fn main() {
 
     let v2:Vec<i32> = Vec::new(); //empty vector of integers
 
-    let t:i32 = v1.iter().sum();
-    println!("{}", t);
+    let d = v1.iter().map(|x| {x * 2 }).collect::<Vec<i32>>();
+    // println!("{:#?}", d);
 
-    for i in v1.clone().into_iter(){
-        println!("{}", i);
-    }
+
+    let t = (0..100).collect::<Vec<i32>>();
+    // println!("{:#?}", t);
+
+    // for i in v1.clone().into_iter(){
+    //     println!("{}", i);
+    // }
 
     // let t= l.iter().map(|x| x + 200).collect::<Vec<i32>>();
     // println!("{:#?}", t);
