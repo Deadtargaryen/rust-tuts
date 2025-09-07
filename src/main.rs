@@ -6,10 +6,15 @@ fn main() {
     let mut v1:Vec<i32> = vec![65, 66, 67, 68, 69]; //vector of integers
     v1.push(100); //adding element to vector
 
+    let temp = v1.pop().unwrap(); //removing last element from vector
+    // println!("{}", temp);
+
     let v2:Vec<i32> = Vec::new(); //empty vector of integers
 
-    println!("{:#?}", v1);
-
+    for i in v1.iter_mut(){
+        *i += 100;
+        println!("{}", *i);
+    }
     // let t= l.iter().map(|x| x + 200).collect::<Vec<i32>>();
     // println!("{:#?}", t);
 
