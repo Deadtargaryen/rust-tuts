@@ -30,7 +30,18 @@ fn main() {
 
     let name1 = "laptop";
 
-    for i in name1.chars(){
-        println!("{}", i);
-    }
-    }
+    let mut myname:String = name1.to_string();
+
+    name1.encode_utf16();
+
+    myname.push_str(" is a good device");
+
+    
+    println!("{}", myname);
+    
+    let u:Vec<u8> = vec![65,66,67,68,69];
+
+    println!("{}", String::from_utf8_lossy(&u[..]));
+
+}
+    
