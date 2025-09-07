@@ -27,4 +27,10 @@ fn main() {
     v3.push(v1);
     v3.push(v2);
     println!("{:#?}", v3);
+
+    let name1 = "laptop";
+
+    for i in name1.chars(){
+        println!("{}", i);
+    }
     }
