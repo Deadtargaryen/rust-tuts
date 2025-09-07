@@ -11,10 +11,10 @@ fn main() {
 
     let v2:Vec<i32> = Vec::new(); //empty vector of integers
 
-    for i in v1.iter_mut(){
-        *i += 100;
-        println!("{}", *i);
+    for i in v1.clone().into_iter(){
+        println!("{}", i);
     }
+
     // let t= l.iter().map(|x| x + 200).collect::<Vec<i32>>();
     // println!("{:#?}", t);
 
