@@ -11,6 +11,9 @@ fn main() {
 
     let v2:Vec<i32> = Vec::new(); //empty vector of integers
 
+    let t:i32 = v1.iter().sum();
+    println!("{}", t);
+
     for i in v1.clone().into_iter(){
         println!("{}", i);
     }
