@@ -18,18 +18,7 @@ fn main() {
     let t = (0..100).collect::<Vec<i32>>();
     // println!("{:#?}", t);
 
-    // for i in v1.clone().into_iter(){
-    //     println!("{}", i);
-    // }
-
-    // let t= l.iter().map(|x| x + 200).collect::<Vec<i32>>();
-    // println!("{:#?}", t);
-
-    // for i in l.into_iter(){
-        // *i =*i + 100 ;
-    //     println!("{}", i);
-    // }
-
-
-    // println!("{:?}", l.contains(&1)); //gives boolean value true or false
+    let mut v3:Vec<Vec<i32>> = Vec::new();
+    v3.push(v1);
+    println!("{:#?}", v3);
     }
