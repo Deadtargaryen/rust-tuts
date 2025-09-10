@@ -1,27 +1,16 @@
-use std::io;
+use std::{env, os::windows::process};
 
 fn main() {
+
+    //filename.exe 
     
-    let mut n = String::new();
+    let mut args = env::args().collect::<Vec<String>>();
 
-    println!("Enter set of numbers");
-
-    io::stdin().read_line(&mut n).expect("expected user input");
-
-    let count= n.trim().parse::<i32>().unwrap();
-
-    let mut v1:Vec<i32> = Vec::new();
-
-    for i in 0..count{
-        let mut temp = String::new();
-
-        io::stdin().read_line( &mut temp).expect("msg");
-
-        let t1 = temp.trim().parse::<i32>().expect("Integer expected");
-
-        v1.push (t1)
+    if args.len()!=3{
+        println!("[+] Usage: filename.exe arg1 arg2 arg3");
+        std::process::exit(0);
     }
 
-    println!("all numbers: {:?}", v1);
+    println!("{:?}", args);
 }
     
