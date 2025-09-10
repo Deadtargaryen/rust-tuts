@@ -1,16 +1,16 @@
-use std::{env, os::windows::process};
 
-fn main() {
-
-    //filename.exe 
-    
-    let mut args = env::args().collect::<Vec<String>>();
-
-    if args.len()!=3{
-        println!("[+] Usage: filename.exe arg1 arg2 arg3");
-        std::process::exit(0);
+fn countupto(x:i32){
+    let mut counter = 0;
+    for i in 1..x+1{
+        counter += i;
     }
 
-    println!("{:?}", args);
+    println!("{}", counter);
+}
+
+fn main() {
+//call the function
+    countupto(10);
+    
 }
     
