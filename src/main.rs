@@ -6,7 +6,7 @@ fn countupto(x:i32) -> i32{
     }
 
     // println!("{}", counter);
-    return counter;
+    counter
 }
 
 fn main() {
