@@ -1,6 +1,9 @@
-fn testing (name:&mut String){
-    name.push_str(" is the best");
+fn testing () -> String{
+    //dangling reference 
+    let myname = String::from("lenovo");
+    return myname;
 }
+
 
 fn main() {
     let mut s = String::from("tech69");
