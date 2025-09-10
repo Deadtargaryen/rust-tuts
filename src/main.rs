@@ -1,16 +1,17 @@
 
-fn countupto(x:i32){
+fn countupto(x:i32) -> i32{
     let mut counter = 0;
     for i in 1..x+1{
         counter += i;
     }
 
-    println!("{}", counter);
+    // println!("{}", counter);
+    return counter;
 }
 
 fn main() {
 //call the function
-    countupto(10);
-    
+   let res =  countupto(10);
+    println!("{}", res);
 }
     
