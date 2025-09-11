@@ -10,10 +10,15 @@ pub fn countupto(x:i32) -> i32{
 }
 
 
-pub fn adder(a:Vec<i32>){
+pub fn adder(a:&Vec<i32>){
     println!("{:?}", a);
 }
 
+
+fn randongeneration() ->String {
+    let name =  "tech69";
+    return name.to_string();
+}
 
 fn main() {
 //call the function
@@ -23,7 +28,12 @@ fn main() {
 // adder(&arr);
 
 
-let v1 = (0..50).collect::<Vec<i32>>();
-adder(v1);
+    // let v1 = (0..50).collect::<Vec<i32>>();
+    // adder(&v1);
+
+    // println!("{:?}", v1);
+
+
+    println!("{}", randongeneration());
 }
     
