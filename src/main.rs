@@ -1,3 +1,4 @@
+use std::ffi::c_void;
 
 fn main() {
 
@@ -10,7 +11,10 @@ fn main() {
 
         let p = &mut b as *mut i32; // or b.as_mut_ptr()
 
-        let temp = std::ptr::read((p as usize+4) as *mut i32);
+        let temp = std::ptr::read((p as usize+12) as *mut i32);
+
+
+        let q = b.as_mut_ptr() as *mut c_void;
 
         /*let p = &mut a as *mut i32;
 
