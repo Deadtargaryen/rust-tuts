@@ -1,29 +1,32 @@
-use std::ffi::c_void;
+use ldap3::*;
+
+use ldap3::result::Result;
+use std::process::exit;
 
 fn main() {
+    let ldap = LdapConn::new("ldap://192.168.0.100:3268");
 
-    let mut a = 4;
+    let mut ldapcon = match ldap {
+        Ok(l) => l,
+        Err(r) => panic!("{}", r),
+    };
 
-    let mut b = vec![5,6,7,8];
+    ldapcon
+        .simple_bind("CN=Administrator CN=Users, DC=tech69, DC=local", "password")
+        .unwrap();
 
+    let res = ldapcon
+        .search(
+            "DC=tech69,DC=local",
+            Scope::Subtree,
+            "(objectclass=user)",
+            vec!["dn"],
+        )
+        .unwrap();
 
-    unsafe {
+    let (re, ldapResult) = res.success().unwrap();
 
-        let p = &b  as *const Vec<i32>;
-
-        println!("address of a: {:x?}", std::ptr::addr_of!(b));
-        
-        let q = b.as_mut_ptr();
-
-        //reading len & capacity of vectors
-        let temp = std::ptr::read((p as usize+8) as *mut i32);
-        println!("{:x?}", temp);
-        
-
-
-    }
-
-
-    // println!("{}", a)
+    for i in re{
+        println!("{:#?}", SearchEntry::construct(i));
+    };
 }
-    
