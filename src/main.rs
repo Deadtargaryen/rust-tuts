@@ -7,9 +7,13 @@ fn main() {
 
     unsafe {
 
-        let p = &a as *const i32;
+        let p = &mut a as *mut i32;
 
-        println!("pointer value: {:x?}", *p);
+        println!("pointer value: {:x?}", p);
+
+        println!("address of a: {:x?}", std::ptr::addr_of!(a));
+
+        *p = *p + 10; 
 
     }
 
